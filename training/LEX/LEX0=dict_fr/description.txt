@@ -1,1 +1,0 @@
-initial lexicon from dict_cmu french vocabulary
