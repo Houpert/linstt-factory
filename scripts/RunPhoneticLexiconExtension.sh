@@ -1,8 +1,7 @@
 #!/bin/bash
 
 . path.sh
-
-# Usage: perl RunPhoneticLexiconExtension.sh <
+. cmd.sh
 
 text_vocab=$1
 g2p_model_dir=$2

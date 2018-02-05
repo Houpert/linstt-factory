@@ -53,6 +53,9 @@ for trs_file in $(find $src -type f -name "*.trs" | sort); do
     python3 local/parseESTERSyncV2.py $trs_file $dst >> $dst/log.txt 2>&1
 done
 
+cat $dst/wav.scp | awk '{ print $1, $1, "A"; }' > $dst/reco2file_and_channel
+echo ';; empty.glm [FAKE]     =>  %HESITATION     / [ ] __ [ ] ;; hesitation token' > $dst/glm
+
 # Sort all files
 # text
 #export LC_ALL=C
